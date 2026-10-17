@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gorila de Montaña - Zoológico Salvaje</title>
+    <style>
+        /* ==================== ESTILOS CSS ==================== */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Encabezado */
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1535083783855-76ae62b2914e?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #e0e0e0;
+        }
+
+        /* Menú de Navegación */
+        nav {
+            background-color: #2e5a1c;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            display: block;
+            color: #fff;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #43822a;
+        }
+
+        /* Contenido del Animal */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .animal-detail {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .top-actions {
+            margin-bottom: 25px;
+        }
+
+        .animal-header {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .animal-header img {
+            width: 100%;
+            max-width: 450px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .animal-info-quick {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .animal-info-quick h2 {
+            color: #2e5a1c;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 1.05rem;
+        }
+
+        .info-list strong {
+            color: #2e5a1c;
+        }
+
+        .animal-description {
+            margin-top: 20px;
+        }
+
+        .animal-description h3 {
+            color: #2e5a1c;
+            font-size: 1.5rem;
+            margin: 20px 0 10px 0;
+        }
+
+        .animal-description p {
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+            color: #444;
+        }
+
+        /* Botones */
+        .btn {
+            display: inline-block;
+            background-color: #d97706;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #b45309;
+        }
+
+        .btn-back {
+            background-color: #2e5a1c;
+        }
+
+        .btn-back:hover {
+            background-color: #1e3d13;
+        }
+
+        .interactive-zone {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f0f4f1;
+            border-left: 5px solid #2e5a1c;
+            border-radius: 5px;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #1f2937;
+            color: #9ca3af;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>El Gorila de Montaña</h1>
+        <p>Gorilla beringei beringei — El Gigante Apacible</p>
+    </header>
+
+    <!-- Menú de Navegación -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="leon.html">León</a></li>
+            <li><a href="tigre.html">Tigre</a></li>
+            <li><a href="oso.html">Oso Pardo</a></li>
+            <li><a href="lobo.html">Lobo Gris</a></li>
+            <li><a href="gorila.html" class="active">Gorila</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="container">
+        <div class="animal-detail">
+            <!-- Botón de regreso al Inicio -->
+            <div class="top-actions">
+                <a href="index.html" class="btn btn-back">← Volver al Inicio</a>
+            </div>
+
+            <div class="animal-header">
+                <img src="https://images.unsplash.com/photo-1535083783855-76ae62b2914e?auto=format&fit=crop&w=800&q=80" alt="Gorila de Montaña">
+                
+                <div class="animal-info-quick">
+                    <h2>Ficha Técnica</h2>
+                    <ul class="info-list">
+                        <li><strong>Nombre Científico:</strong> Gorilla beringei beringei</li>
+                        <li><strong>Hábitat:</strong> Bosques nublados y montañosos de África Central</li>
+                        <li><strong>Dieta:</strong> Herbívoro (Hojas, tallos, cortezas y frutos)</li>
+                        <li><strong>Esperanza de Vida:</strong> 35 - 40 años en libertad</li>
+                        <li><strong>Peso Promedio:</strong> 135 kg - 195 kg (machos)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="animal-description">
+                <h3>Características Principales</h3>
+                <p>
+                    El gorila de montaña es el primate vivo más grande del planeta. Los machos adultos desarrollan un pelaje plateado en la espalda conforme maduran, por lo que son conocidos como "espalda plateada". A pesar de su enorme fuerza y constitución imponente, son animales pacíficos y predominantemente vegetarianos.
+                </p>
+
+                <h3>Vida Social e Inteligencia</h3>
+                <p>
+                    Viven en grupos familiares muy unidos liderados por un macho espalda plateada, quien protege al grupo y guía las actividades diarias de alimentación y descanso. Poseen una inteligencia notable, capaz de aprender lenguaje de señas, usar herramientas y expresar emociones complejas.
+                </p>
+
+                <!-- Zona interactiva con JavaScript -->
+                <div class="interactive-zone">
+                    <h3>¿Quieres descubrir algo genial sobre los Gorilas?</h3>
+                    <p style="margin-bottom: 15px;">Haz clic en el botón para conocer una característica única de esta especie.</p>
+                    <button id="btnDatoGorila" class="btn">Ver Dato Curioso</button>
+                    <p id="mensajeJS" style="margin-top: 15px; font-weight: bold; color: #2e5a1c;"></p>
+                </div>
+            </div>
+
+            <!-- Botón inferior para regresar -->
+            <div style="margin-top: 30px; text-align: right;">
+                <a href="index.html" class="btn btn-back">← Volver al Inicio</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2026 Zoológico Salvaje - Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btnDatoGorila = document.getElementById('btnDatoGorila');
+            const mensajeJS = document.getElementById('mensajeJS');
+
+            btnDatoGorila.addEventListener('click', () => {
+                mensajeJS.innerText = '🦍 ¡Dato asombroso! Las huellas nasales de los gorilas son totalmente únicas en cada individuo, equivalentes a nuestras huellas dactilares.';
+            });
+        });
+    </script>
+</body>
+</html>

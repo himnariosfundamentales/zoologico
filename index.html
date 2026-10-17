@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoológico Salvaje - Bienvenidos</title>
+    <style>
+        /* ==================== ESTILOS CSS ==================== */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Encabezado */
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1534567153574-2b12153a87f0?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #e0e0e0;
+        }
+
+        /* Menú de Navegación */
+        nav {
+            background-color: #2e5a1c;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        nav a {
+            display: block;
+            color: #fff;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #43822a;
+        }
+
+        /* Sección Bienvenida */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .welcome-section {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .welcome-section h2 {
+            color: #2e5a1c;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .welcome-section p {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+        }
+
+        /* Galería de Animales Salvajes */
+        .animals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-content h3 {
+            color: #2e5a1c;
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .card-content p {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #d97706;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #b45309;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #1f2937;
+            color: #9ca3af;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>Zoológico Salvaje</h1>
+        <p>Un encuentro frente a frente con la naturaleza</p>
+    </header>
+
+    <!-- Menú de Navegación -->
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="leon.html">León</a></li>
+            <li><a href="tigre.html">Tigre</a></li>
+            <li><a href="oso.html">Oso Pardo</a></li>
+            <li><a href="lobo.html">Lobo Gris</a></li>
+            <li><a href="gorila.html">Gorila</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="container">
+        <!-- Sección de Bienvenida -->
+        <section class="welcome-section">
+            <h2>¡Bienvenidos a nuestro Hábitat!</h2>
+            <p>
+                En el <strong>Zoológico Salvaje</strong> nos dedicamos a la conservación, protección y cuidado de las especies más impresionantes del planeta. Explora nuestras instalaciones virtuales y conoce de cerca a nuestros 5 majestuosos animales salvajes.
+            </p>
+            <button id="btnSaludo" class="btn">¡Haz clic para una bienvenida especial!</button>
+        </section>
+
+        <!-- Galería de los 5 Animales Salvajes -->
+        <h2 style="text-align: center; color: #2e5a1c; margin-bottom: 25px;">Nuestros Animales Salvajes</h2>
+        
+        <div class="animals-grid">
+            <!-- Animal 1: León -->
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=600&q=80" alt="León">
+                <div class="card-content">
+                    <div>
+                        <h3>León Africano</h3>
+                        <p>El rey de la selva. Conocido por su imponente melena y su poderoso rugido.</p>
+                    </div>
+                    <a href="leon.html" class="btn">Conocer más</a>
+                </div>
+            </article>
+
+            <!-- Animal 2: Tigre -->
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=600&q=80" alt="Tigre">
+                <div class="card-content">
+                    <div>
+                        <h3>Tigre de Bengala</h3>
+                        <p>El felino más grande del mundo, famoso por su hermoso pelaje a rayas únicas.</p>
+                    </div>
+                    <a href="tigre.html" class="btn">Conocer más</a>
+                </div>
+            </article>
+
+            <!-- Animal 3: Oso Pardo -->
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&w=600&q=80" alt="Oso Pardo">
+                <div class="card-content">
+                    <div>
+                        <h3>Oso Pardo</h3>
+                        <p>Un gigante omnívoro de gran fuerza y excelente habilidad para la pesca.</p>
+                    </div>
+                    <a href="oso.html" class="btn">Conocer más</a>
+                </div>
+            </article>
+
+            <!-- Animal 4: Lobo Gris -->
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1590420485404-f86d22b8abf8?auto=format&fit=crop&w=600&q=80" alt="Lobo Gris">
+                <div class="card-content">
+                    <div>
+                        <h3>Lobo Gris</h3>
+                        <p>Depredador astuto e inteligente que vive y caza en jerarquías de manada.</p>
+                    </div>
+                    <a href="lobo.html" class="btn">Conocer más</a>
+                </div>
+            </article>
+
+            <!-- Animal 5: Gorila -->
+            <article class="card">
+                <img src="https://images.unsplash.com/photo-1535083783855-76ae62b2914e?auto=format&fit=crop&w=600&q=80" alt="Gorila">
+                <div class="card-content">
+                    <div>
+                        <h3>Gorila de Montaña</h3>
+                        <p>El primate más grande de la Tierra, conocido por su gran fuerza y alta inteligencia.</p>
+                    </div>
+                    <a href="gorila.html" class="btn">Conocer más</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2026 Zoológico Salvaje - Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btnSaludo = document.getElementById('btnSaludo');
+            
+            btnSaludo.addEventListener('click', () => {
+                alert('¡Gracias por visitar el Zoológico Salvaje! Disfruta explorando nuestros hábitats virtuales.');
+            });
+        });
+    </script>
+</body>
+</html>
